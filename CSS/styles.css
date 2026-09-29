@@ -1,0 +1,67 @@
+:root{
+    --color_primario: #0E312B;
+    --color_secundario: #a6eec8;
+    --color_acento: #334155;
+    --color_texto_1: #58A06A;
+    --color_texto_2: #77ca9e;
+    --color_texto_3: #A6E7C3;
+    --color_texto_4: #80DBCC;
+    --fuente:
+}
+
+body{
+    background-color: var(--color_primario);
+    color: var(--color_texto_4);
+    font-family: "iceberg";
+    font-size: 16px;
+}
+
+
+.index{
+    background-image: url('../IMG/Rapture_index_fondo.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    color: var(--color_texto_1);
+
+}
+
+h2{
+    text-align: center;
+    color: var(--color_texto_2);
+}
+
+h3 {
+    text-align: center;
+    color: var(--color_texto_3);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color_acento);
+    gap: 2rem;
+    list-style: none;
+    padding: 1.5rem;
+}
+
+.nav-button {
+    background-color: #475569;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-button:hover {
+    background-color: #546173;
+}
+
+.fondo_formulario{
+    background-color: var(--color_secundario);
+}

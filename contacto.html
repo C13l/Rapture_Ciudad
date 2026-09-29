@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Servicios Centrales de Rapture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>
@@ -11,17 +15,17 @@
     <!-- Encabezado y Menu de navegación entre páginas -->
 
     <header>
-        <h1>Contacto - Servicios Centrales de Rapture</h1>
-        <p><em>"¿Acaso un hombre no tiene derecho al fruto de su trabajo?"</em> — Andrew Ryan</p>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="ciudad.html">La Ciudad</a></li>
-                <li><a href="lugares.html">Lugares de Interés</a></li>
-                <li><a href="tecnologia.html">Tecnología</a></li>
-                <li><a href="#">Contacto</a></li>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-button">Inicio</a></li>
+                <li><a href="ciudad.html" class="nav-button">La Ciudad</a></li>
+                <li><a href="lugares.html" class="nav-button">Lugares de Interés</a></li>
+                <li><a href="tecnologia.html" class="nav-button">Tecnología</a></li>
+                <li><a href="#" class="nav-button">Contacto</a></li>
             </ul>
         </nav>
+        <h1>Contacto - Servicios Centrales de Rapture</h1>
+        <p><em>"¿Acaso un hombre no tiene derecho al fruto de su trabajo?"</em> — Andrew Ryan</p>
     </header>
 
     <hr>
@@ -72,16 +76,16 @@
             <form action="#" method="post">
                 <p>
                     <label for="nombre">Nombre completo del ciudadano:</label><br>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Bill McDonagh" required>
+                    <input type="text" class="fondo_formulario" id="nombre" name="nombre" placeholder="Ej. Bill McDonagh" required>
                 </p>
                 <p>
                     <label for="email">Correo electrónico:</label><br>
-                    <input type="email" id="email" name="email" placeholder="ciudadano@ryanindustries.rapture" required>
+                    <input type="email" class="fondo_formulario" id="email" name="email" placeholder="ciudadano@ryanindustries.rapture" required>
                 </p>
                 <p>
                     <label for="entidad">Entidad o Sector de Consulta:</label><br>
                     <label for="entidad">Entidad o Sector de Consulta:</label><br>
-                    <select id="entidad" name="entidad">
+                    <select class="fondo_formulario" id="entidad" name="entidad">
                         <option value="ryan">Ryan Industries (Administración General)</option>
                         <option value="fontaine">Fontaine Futuristics (Suministros de ADAM y Plásmidos)</option>
                         <option value="transporte">Metro de Rapture y Red de Batisferas</option>
@@ -92,10 +96,10 @@
                 </p>
                 <p>
                     <label for="mensaje">Detalle de la solicitud o mensaje:</label><br>
-                    <textarea id="mensaje" name="mensaje" rows="6" cols="50" placeholder="Escribí tu mensaje aquí..." required></textarea>
+                    <textarea class="fondo_formulario" id="mensaje" name="mensaje" rows="6" cols="50" placeholder="Escribí tu mensaje aquí..." required></textarea>
                 </p>
                 <p>
-                    <button type="submit">Enviar Solicitud</button>
+                    <button class="fondo_formulario" type="submit">Enviar Solicitud</button>
                 </p>
             </form>
         </section>
