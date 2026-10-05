@@ -1,24 +1,27 @@
 :root{
     --color_primario: #0E312B;
     --color_secundario: #a6eec8;
-    --color_acento: #334155;
+    --color_terciario: #5F4914;
+    --color_cuaternario: #AD8425;
+    --color_acento: #87671D;
     --color_texto_1: #58A06A;
     --color_texto_2: #77ca9e;
     --color_texto_3: #A6E7C3;
     --color_texto_4: #80DBCC;
-<<<<<<< HEAD
     --fuente:"iceberg", sans-serif;
-=======
->>>>>>> c0fe668f75c2845761ec269fa06cdba20bd8a39a
 }
 
 body{
     background-color: var(--color_primario);
     color: var(--color_texto_4);
-    font-family: "iceberg";
+    font-family: var(--fuente);
     font-size: 16px;
 }
 
+hr {
+    border: none;
+    border-top: 2px solid var(--color_acento);
+}
 
 .index{
     background-image: url('../IMG/Rapture_index_fondo.jpg');
@@ -46,14 +49,14 @@ h3 {
 .nav-menu {
     display: flex;
     justify-content: center;
-    background-color: var(--color_acento);
+    background-color: var(--color_terciario);
     gap: 2rem;
     list-style: none;
     padding: 1.5rem;
 }
 
 .nav-button {
-    background-color: #475569;
+    background-color: var(--color_acento);
     text-decoration: none;
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
@@ -62,7 +65,7 @@ h3 {
 }
 
 .nav-button:hover {
-    background-color: #546173;
+    background-color: var(--color_cuaternario);
 }
 
 .fondo_formulario{
@@ -73,4 +76,8 @@ h3 {
     margin: 0 auto;
     max-width: 50%;
     height: auto;
+}
+
+a {
+    color: var(--color_cuaternario);
 }
