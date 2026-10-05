@@ -6,7 +6,7 @@
     --color_texto_2: #77ca9e;
     --color_texto_3: #A6E7C3;
     --color_texto_4: #80DBCC;
-    --fuente:
+    --fuente:"iceberg", sans-serif;
 }
 
 body{
@@ -64,4 +64,10 @@ h3 {
 
 .fondo_formulario{
     background-color: var(--color_secundario);
+}
+.video{
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
 }
