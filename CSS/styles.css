@@ -1,3 +1,6 @@
+/* ==========================================
+    VARIABLES GLOBALES Y CONFIGURACIÓN BASE
+   ========================================== */
 :root{
     --color_primario: #0E312B;
     --color_secundario: #a6eec8;
@@ -8,7 +11,7 @@
     --color_texto_2: #77ca9e;
     --color_texto_3: #A6E7C3;
     --color_texto_4: #80DBCC;
-    --fuente:"iceberg", sans-serif;
+    --fuente: "Iceberg", sans-serif;
 }
 
 body{
@@ -33,7 +36,6 @@ hr {
 h1{
     text-align: center;
     color: var(--color_texto_1);
-
 }
 
 h2{
@@ -46,6 +48,70 @@ h3 {
     color: var(--color_texto_3);
 }
 
+a {
+    color: var(--color_cuaternario);
+}
+
+.video{
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+}
+
+/* ==========================================
+            BOOTSTRAP - PERSONALIZACIONES
+   ========================================== */
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.banner-container {
+    position: relative;
+    background-color: var(--color_terciario);
+    overflow: hidden;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color_primario);
+    opacity: 0.85;
+    z-index: 0;
+}
+
+.card .position-absolute {
+    position: absolute;
+    z-index: 2;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--color_terciario);
+    border-bottom: 2px solid var(--color_acento);
+}
+
+.navbar-nav .nav-link {
+    background-color: var(--color_acento);
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: var(--color_texto_3);
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover, 
+.navbar-nav .nav-link.active {
+    background-color: var(--color_cuaternario);
+    color: var(--color_primario);
+}
+
+/*Nav antiguo*/
 .nav-menu {
     display: flex;
     justify-content: center;
@@ -68,16 +134,55 @@ h3 {
     background-color: var(--color_cuaternario);
 }
 
-.fondo_formulario{
-    background-color: var(--color_secundario);
-}
-.video{
-    display: block;
-    margin: 0 auto;
-    max-width: 50%;
-    height: auto;
+
+
+/* Tarjetas */
+.card {
+    background-color: var(--color_primario);
+    border: 1px solid var(--color_acento);
+    color: var(--color_texto_4);
 }
 
-a {
-    color: var(--color_cuaternario);
+.card-title {
+    color: var(--color_texto_2);
+}
+
+/* Campos de Formulario */
+.form-control, 
+.form-select {
+    background-color: var(--color_secundario);
+    color: var(--color_primario);
+    border: 1px solid var(--color_acento);
+}
+
+.form-control::placeholder {
+    color: var(--color_acento);
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--color_acento);
+    border-color: var(--color_acento);
+    color: var(--color_texto_3);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--color_cuaternario);
+    border-color: var(--color_cuaternario);
+    color: var(--color_primario);
+}
+
+/* Alertas */
+.alert-warning {
+    background-color: var(--color_terciario);
+    border-color: var(--color_cuaternario);
+    color: var(--color_texto_3);
+}
+
+/* Badges / Etiquetas */
+.badge {
+    background-color: var(--color_cuaternario);
+    color: var(--color_primario);
+    font-family: var(--fuente);
 }

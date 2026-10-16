@@ -4,116 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Servicios Centrales de Rapture</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- CSS Propio -->
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>
 
-    <!-- Encabezado y Menu de navegación entre páginas -->
-
-    <header>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-button">Inicio</a></li>
-                <li><a href="ciudad.html" class="nav-button">La Ciudad</a></li>
-                <li><a href="lugares.html" class="nav-button">Lugares de Interés</a></li>
-                <li><a href="tecnologia.html" class="nav-button">Tecnología</a></li>
-                <li><a href="#" class="nav-button">Contacto</a></li>
-            </ul>
+    <!-- Menú de navegación Navbar de Bootstrap con position: sticky -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="index.html">Rapture Industries</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end mt-1" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center gap-3">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ciudad.html">La Ciudad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares de Interés</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tecnologia.html">Tecnología</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <h1>Contacto - Servicios Centrales de Rapture</h1>
-        <p><em>"¿Acaso un hombre no tiene derecho al fruto de su trabajo?"</em> — Andrew Ryan</p>
     </header>
 
-    <hr>
+    <!-- Banner estático (se mueve con el scroll normal) -->
+    <div class="banner-container position-relative text-center py-5">
+        <div class="banner-overlay"></div>
+        <div class="position-relative z-1 container">
+            <h1>Contacto - Servicios Centrales de Rapture</h1>
+            <p class="fs-5"><em>"¿Acaso un hombre no tiene derecho al fruto de su trabajo?"</em> — Andrew Ryan</p>
+        </div>
+    </div>
 
-    <main>
-
+    <main class="container my-5">
         <!-- Descripción sencilla del objetivo de la página -->
-
-        <section>
+        <section class="mb-5 text-center">
             <h2>Oficina Central de Servicios al Ciudadano y Corporaciones</h2>
-            <p>
+            <p class="lead">
                 En Rapture, el progreso individual no se detiene ante regulaciones gubernamentales ni censuras morales. 
                 Si querés tramitar licencias comerciales para Ryan Industries, solicitar servicios de seguridad privada, 
                 o reportar incidencias en las líneas del Metro de Rapture y sus batisferas, ponete en contacto con nuestro centro administrativo.
             </p>
         </section>
 
-        <hr>
+        <!-- Alerta de Bootstrap -->
+        <div class="alert alert-warning d-flex align-items-center mb-5" role="alert">
+            <div>
+                <strong>Aviso de Seguridad:</strong> Las comunicaciones externas están sujetas a monitoreo de Ryan Security para evitar filtraciones a la resistencia de Atlas.
+            </div>
+        </div>
 
-        <!-- Datos de contacto -->
-
-        <section>
-            <h3>Datos Oficiales de Contacto</h3>
-            <p>
-                <strong>Dirección Física:</strong> 
-                Torre Ryan, Nivel 4, Sector Olympus Heights (63° 2' N, 29° 55' O, Estrecho de Dinamarca).
-            </p>
-            <p>
-                <strong>Envío Postal Interno:</strong> 
-                Red de Tubos Neumáticos Jet-Postal, Terminal Central #05 - Casilla Ryan Industries.
-            </p>
-            <p>
-                <strong>Línea Interna de Comunicaciones:</strong> 
-                <a href="tel:+163022955">+1 (6302) 2955-RAPTURE (+1 6302-2955)</a>
-            </p>
-            <p>
-                <strong>Correo Electrónico Oficial:</strong> 
-                <a href="mailto:atencion@ryanindustries.rapture">atencion@ryanindustries.rapture</a>
-            </p>
+        <!-- Grilla de contenido con Bootstrap y Flexbox wrap -->
+        <section class="mb-5">
+            <h3 class="mb-4 text-center">Datos Oficiales de Contacto</h3>
+            <div class="row g-4 d-flex flex-wrap">
+                <!-- Columna 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <span class="badge position-absolute top-0 end-0 m-3">Oficial</span>
+                            <h5 class="card-title">Dirección Física</h5>
+                            <p class="card-text">Torre Ryan, Nivel 4, Sector Olympus Heights (63° 2' N, 29° 55' O, Estrecho de Dinamarca).</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Envío Postal Interno</h5>
+                            <p class="card-text">Red de Tubos Neumáticos Jet-Postal, Terminal Central #05 - Casilla Ryan Industries.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Comunicaciones</h5>
+                            <p class="card-text">
+                                <strong>Línea Interna:</strong> <a href="tel:+163022955">+1 (6302) 2955</a><br>
+                                <strong>Correo:</strong> <a href="mailto:atencion@ryanindustries.rapture">atencion@ryanindustries.rapture</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <hr>
-
         <!-- Formulario para consultas -->
-
-        <section>
-            <h3>Envíanos tu Consulta</h3>
-            <form action="#" method="post">
-                <p>
-                    <label for="nombre">Nombre completo del ciudadano:</label><br>
-                    <input type="text" class="fondo_formulario" id="nombre" name="nombre" placeholder="Ej. Bill McDonagh" required>
-                </p>
-                <p>
-                    <label for="email">Correo electrónico:</label><br>
-                    <input type="email" class="fondo_formulario" id="email" name="email" placeholder="ciudadano@ryanindustries.rapture" required>
-                </p>
-                <p>
-                    <label for="entidad">Entidad o Sector de Consulta:</label><br>
-                    <label for="entidad">Entidad o Sector de Consulta:</label><br>
-                    <select class="fondo_formulario" id="entidad" name="entidad">
-                        <option value="ryan">Ryan Industries (Administración General)</option>
-                        <option value="fontaine">Fontaine Futuristics (Suministros de ADAM y Plásmidos)</option>
-                        <option value="transporte">Metro de Rapture y Red de Batisferas</option>
-                        <option value="seguridad">Seguridad Central de Ryan (Sullivan)</option>
-                        <option value="salud">Pabellón Médico y Servicios Quirúrgicos</option>
-                        <option value="computacion">Rapture Central Computing (El Pensador)</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="mensaje">Detalle de la solicitud o mensaje:</label><br>
-                    <textarea class="fondo_formulario" id="mensaje" name="mensaje" rows="6" cols="50" placeholder="Escribí tu mensaje aquí..." required></textarea>
-                </p>
-                <p>
-                    <button class="fondo_formulario" type="submit">Enviar Solicitud</button>
-                </p>
-            </form>
+        <section class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="card p-4 shadow">
+                    <h3 class="mb-4 text-center">Envíanos tu Consulta</h3>
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo del ciudadano:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Bill McDonagh" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo electrónico:</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="ciudadano@ryanindustries.rapture" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="entidad" class="form-label">Entidad o Sector de Consulta:</label>
+                            <select class="form-select" id="entidad" name="entidad">
+                                <option value="ryan">Ryan Industries (Administración General)</option>
+                                <option value="fontaine">Fontaine Futuristics (Suministros de ADAM y Plásmidos)</option>
+                                <option value="transporte">Metro de Rapture y Red de Batisferas</option>
+                                <option value="seguridad">Seguridad Central de Ryan (Sullivan)</option>
+                                <option value="salud">Pabellón Médico y Servicios Quirúrgicos</option>
+                                <option value="computacion">Rapture Central Computing (El Pensador)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Detalle de la solicitud o mensaje:</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje aquí..." required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary px-5 py-2" type="submit">Enviar Solicitud</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
-    <hr>
-
-    <footer>
+    <footer class="text-center py-4 mt-5 border-top border-warning">
         <small>
-        <p>&copy; 1946 - 1958 Ryan Industries. Todos los derechos reservados.</p>
-        <p>Ubicación: Océano Atlántico Norte, a 433 km al oeste de Reikiavik.</p>
-        <p><em>"Ni dioses ni reyes. Solo el hombre."</em></p>
+            <p>&copy; 1946 - 1958 Ryan Industries. Todos los derechos reservados.</p>
+            <p>Ubicación: Océano Atlántico Norte, a 433 km al oeste de Reikiavik.</p>
+            <p><em>"Ni dioses ni reyes. Solo el hombre."</em></p>
         </small>
     </footer>
 
+    <!-- Bootstrap 5 JS Bundle CDN (Corregido sin integridad conflictiva) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
