@@ -147,6 +147,16 @@ a {
     color: var(--color_texto_2);
 }
 
+.card-img-top{
+    width: auto;
+    height: 30rem;
+}
+
+.imgcarousel{
+    width: auto;
+    height: 50rem;
+}
+
 /* Campos de Formulario */
 .form-control, 
 .form-select {
