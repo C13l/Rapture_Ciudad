@@ -90,6 +90,12 @@ a {
     z-index: 2;
 }
 
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Navbar */
 .navbar {
     background-color: var(--color_terciario);
