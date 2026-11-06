@@ -117,30 +117,6 @@ a {
     color: var(--color_primario);
 }
 
-/*Nav antiguo*/
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    background-color: var(--color_terciario);
-    gap: 2rem;
-    list-style: none;
-    padding: 1.5rem;
-}
-
-.nav-button {
-    background-color: var(--color_acento);
-    text-decoration: none;
-    padding: 1rem 1.5rem;
-    border-radius: 0.5rem;
-    font-weight: bold;
-    color: white;
-}
-
-.nav-button:hover {
-    background-color: var(--color_cuaternario);
-}
-
-
 
 /* Tarjetas */
 .card {
