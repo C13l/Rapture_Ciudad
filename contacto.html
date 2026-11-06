@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
-    <!-- Bootstrap 5 CSS CDN -->
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- CSS Propio -->
     <link rel="stylesheet" href="CSS/styles.css">
@@ -94,7 +94,7 @@
                             <h5 class="card-title">Comunicaciones</h5>
                             <p class="card-text">
                                 <strong>Línea Interna:</strong> <a href="tel:+163022955">+1 (6302) 2955</a><br>
-                                <strong>Correo:</strong> <a href="mailto:atencion@ryanindustries.rapture">atencion@ryanindustries.rapture</a>
+                                <strong>Correo:</strong> <a href="mailto:atencion@ryanindustries.com">atencion@ryanindustries.com</a>
                             </p>
                         </div>
                     </div>
@@ -102,19 +102,63 @@
             </div>
         </section>
 
+<!-- Sección del Acordeón FAQ -->
+        <section class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8">
+                <h3 class="mb-4 text-center">Consultas Habituales</h3>
+                    <br>
+                <div class="card p-4 shadow">
+                    <!-- Pregunta 1 -->
+                    <div class="faq mb-3 pb-3">
+                        <button class="pregunta btn btn-outline-warning w-100 text-start fw-bold fs-5">
+                            ¿Dónde puedo adquirir nuevos Plásmidos y Tónicos Genéticos?
+                        </button>
+                        <p class="respuesta oculto mt-3 p-3 rounded">
+                            Podés adquirir Plásmidos y Tónicos de la más alta calidad en cualquier maquina expendedora de 
+                            <strong>Gatherer's Garden</strong> distribuida por las galerías principales. Requiere ADAM disponible para la transacción.
+                        </p>
+                        <hr>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="faq mb-3 pb-3">
+                        <button class="pregunta btn btn-outline-warning w-100 text-start fw-bold fs-5">
+                            ¿Cómo solicito un permiso para el uso de Batisferas?
+                        </button>
+                        <p class="respuesta oculto mt-3 p-3 rounded">
+                            Los viajes entre zonas residenciales e industriales se realizan mediante la red de batisferas de Ryan Industries. 
+                            Debés presentar tu acreditación de ciudadanía e impronta genética válida en la estación central de metro.
+                        </p>
+                        <hr>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="faq mb-3 pb-3">
+                        <button class="pregunta btn btn-outline-warning w-100 text-start fw-bold fs-5">
+                            ¿Qué debo hacer en caso de un fallo en la presión o filtración de agua?
+                        </button>
+                        <p class="respuesta oculto mt-3 p-3 rounded">
+                            Mantenga la calma. Diríjase de inmediato a la esclusa de emergencia más cercana y notifique al cuerpo de mantenimiento de Bill McDonagh mediante el tubo neumático de servicio más próximo.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Formulario para consultas -->
         <section class="row justify-content-center">
             <div class="col-12 col-lg-8">
+                <h3 class="mb-4 text-center">Envíanos tu Consulta</h3>
                 <div class="card p-4 shadow">
-                    <h3 class="mb-4 text-center">Envíanos tu Consulta</h3>
-                    <form action="#" method="post">
+                    <form id="formConsulta" action="#" method="post">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre completo del ciudadano:</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Bill McDonagh" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej. Bill McDonagh">
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo electrónico:</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="ciudadano@ryanindustries.rapture" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="ciudadano@ryanindustries.com">
                         </div>
                         <div class="mb-3">
                             <label for="entidad" class="form-label">Entidad o Sector de Consulta:</label>
@@ -129,8 +173,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="mensaje" class="form-label">Detalle de la solicitud o mensaje:</label>
-                            <textarea class="form-control" id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje aquí..." required></textarea>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="6"  maxlength="200" placeholder="Escribí tu mensaje aquí..."></textarea>
+                            <p id="contador">0 / 200</p>
                         </div>
+
+                        <!-- Contenedor para los mensajes de error (con clases de Bootstrap para que se vea rojo) -->
+                        <div id="msg-error" class="text-danger mb-3 fw-bold"></div>
+
                         <div class="text-center">
                             <button class="btn btn-primary px-5 py-2" type="submit">Enviar Solicitud</button>
                         </div>
@@ -148,7 +197,90 @@
         </small>
     </footer>
 
-    <!-- Bootstrap 5 JS Bundle CDN (Corregido sin integridad conflictiva) -->
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript Presonalizado -->
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Usar querySelectorAll para obtener todos los .faq
+            const faqs = document.querySelectorAll('.faq');
+
+            faqs.forEach(faq => {
+                // Obtener el botón y la respuesta dentro de cada bloque .faq
+                const boton = faq.querySelector('.pregunta');
+                const respuesta = faq.querySelector('.respuesta');
+
+                // 2. Asignar event listener de "click" a cada botón
+                boton.addEventListener('click', () => {
+                    const estabaOculto = respuesta.classList.contains('oculto');
+
+                    // 3. Al hacer clic: cerrar todas las respuestas
+                    document.querySelectorAll('.faq .respuesta').forEach(r => {
+                        r.classList.add('oculto');
+                    });
+
+                    // Y luego abrir la clicada (si estaba cerrada)
+                    if (estabaOculto) {
+                        respuesta.classList.remove('oculto');
+                    }
+                });
+            });
+        });
+
+
+        const formConsulta = document.getElementById('formConsulta');
+        const inputNombre = document.getElementById('nombre');
+        const inputEmail = document.getElementById('email');
+        const selectEntidad = document.getElementById('entidad');
+        const inputMensaje = document.getElementById('mensaje');
+        const msgError = document.getElementById('msg-error');
+
+        formConsulta.addEventListener('submit', (e) => {
+            e.preventDefault();
+            msgError.textContent = '';
+
+            const nombre = inputNombre.value.trim();
+            const email = inputEmail.value.trim();
+            const entidad = selectEntidad.value;
+            const mensaje = inputMensaje.value.trim();
+
+            if (nombre === '' || email === '' || mensaje === '') {
+                msgError.textContent = 'Por favor, completá todos los campos obligatorios.';
+                return;
+            }
+
+            console.log('Datos válidos:', { nombre, email, entidad, mensaje });
+            alert(`¡Gracias, ${nombre}! Tu consulta fue enviada con éxito.`);
+            formConsulta.reset();
+        });
+
+        const mensaje = document.getElementById('mensaje');
+        const contador = document.getElementById('contador');
+        const maxLength = mensaje.getAttribute('maxlength');
+
+        mensaje.addEventListener('input', () => {
+            const currentLength = mensaje.value.length;
+            contador.textContent = `${currentLength} / ${maxLength}`;
+
+            // Si quedan menos de 20 caracteres disponibles (y no llegó al límite exacto)
+            const caracteresRestantes = maxLength - currentLength;
+
+            if (currentLength === 0) {
+                contador.style.color = ''; // Vuelve al color por defecto
+            } else if (caracteresRestantes === 0) {
+                contador.style.color = 'red';
+            } else if (caracteresRestantes < 20) {
+                contador.style.color = 'orange';
+            } else {
+                contador.style.color = ''; // Color por defecto cuando hay margen
+            }
+        });
+
+
+    </script>
+
 </body>
 </html>
