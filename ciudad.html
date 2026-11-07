@@ -129,48 +129,55 @@
 
     <hr>
 
-        <section>
-            <h2>Zonas de la ciudad</h2>
+<!-- Sección Zonas (Cumple con: Grilla, Comportamiento Responsivo, Gutters y Cards h-100) -->
+        <section class="mb-5">
+            <h2 class="border-bottom pb-2 mb-4">Zonas de la ciudad</h2>
+            
+            <!-- 'row-cols-1' (1 col en celular), 'row-cols-md-2' (2 en tablet), 'row-cols-lg-4' (4 en PC). El 'g-4' es el Gutter (espacio entre ellas) -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                
+                <!-- Tarjeta 1 -->
+                <div class="col">
+                    <!-- El 'h-100' hace que todas las tarjetas midan exactamente lo mismo de alto -->
+                    <div class="card h-100 bg-black text-light border-secondary">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-info">Welcome Center</h3>
+                            <p class="card-text small mb-0">Es una de las primeras zonas de ingreso a Rapture. Allí los visitantes comienzan a conocer la ciudad.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <article>
-                <h3>Welcome Center</h3>
+                <!-- Tarjeta 2 -->
+                <div class="col">
+                    <div class="card h-100 bg-black text-light border-secondary">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-info">Medical Pavilion</h3>
+                            <p class="card-text small mb-0">Es una zona dedicada principalmente a hospitales, medicina y tratamientos científicos.</p>
+                        </div>
+                    </div>
+                </div>
 
-                <p>
-                    Es una de las primeras zonas de ingreso a Rapture.
-                    Allí los visitantes comienzan a conocer la ciudad.
-                </p>
-            </article>
+                <!-- Tarjeta 3 -->
+                <div class="col">
+                    <div class="card h-100 bg-black text-light border-secondary">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-info">Neptune's Bounty</h3>
+                            <p class="card-text small mb-0">Es una zona relacionada con el puerto, la pesca y el movimiento de productos dentro de la ciudad.</p>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Tarjeta 4 -->
+                <div class="col">
+                    <div class="card h-100 bg-black text-light border-secondary">
+                        <div class="card-body">
+                            <h3 class="card-title h5 text-info">Fort Frolic</h3>
+                            <p class="card-text small mb-0">Es uno de los principales sectores culturales y de entretenimiento. Allí se encuentran teatros, comercios y espacios artísticos.</p>
+                        </div>
+                    </div>
+                </div>
 
-            <article>
-                <h3>Medical Pavilion</h3>
-
-                <p>
-                    Es una zona dedicada principalmente a hospitales,
-                    medicina y tratamientos científicos.
-                </p>
-            </article>
-
-
-            <article>
-                <h3>Neptune's Bounty</h3>
-
-                <p>
-                    Es una zona relacionada con el puerto, la pesca
-                    y el movimiento de productos dentro de la ciudad.
-                </p>
-            </article>
-
-
-            <article>
-                <h3>Fort Frolic</h3>
-
-                <p>
-                    Es uno de los principales sectores culturales y de entretenimiento.
-                    Allí se encuentran teatros, comercios y espacios artísticos.
-                </p>
-            </article>
-
+            </div>
         </section>
 
     <hr>

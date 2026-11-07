@@ -1,30 +1,57 @@
-/* ==========================================
-    VARIABLES GLOBALES Y CONFIGURACIÓN BASE
-   ========================================== */
 :root{
     --color_primario: #0E312B;
     --color_secundario: #a6eec8;
-    --color_terciario: #5F4914;
-    --color_cuaternario: #AD8425;
-    --color_acento: #87671D;
+    --color_acento: #334155;
     --color_texto_1: #58A06A;
     --color_texto_2: #77ca9e;
     --color_texto_3: #A6E7C3;
     --color_texto_4: #80DBCC;
-    --fuente: "Iceberg", sans-serif;
+    --fuente:"iceberg", sans-serif;
 }
 
 body{
     background-color: var(--color_primario);
     color: var(--color_texto_4);
-    font-family: var(--fuente);
+    font-family: "iceberg";
     font-size: 16px;
+
+    /* Personalización del Acordeón (La Historia) */
+.accordion-item {
+    background-color: #071315 !important; /* Fondo casi negro para las pestañas */
+    border: 1px solid #1a3d42 !important; /* Borde sutil verde marino */
 }
 
-hr {
-    border: none;
-    border-top: 2px solid var(--color_acento);
+.accordion-button {
+    background-color: #0a181b !important; /* Botón cerrado oscuro */
+    color: #00ffcc !important; /* Texto de los títulos en verde neón/cian */
 }
+
+/* Cuando el acordeón se abre */
+.accordion-button:not(.collapsed) {
+    background-color: #112d32 !important; /* Fondo al abrirse */
+    color: #00ffcc !important; /* Mantiene el texto cian */
+    box-shadow: none !important;
+}
+
+/* Personalización de las Tarjetas (Zonas de la ciudad) */
+.card {
+    background-color: #071315 !important; /* Fondo oscuro igual al acordeón */
+    border: 1px solid #1a3d42 !important; /* Borde combinado */
+    transition: transform 0.2s; /* Efecto suave al pasar el mouse */
+}
+
+/* Efecto opcional: cuando pasas el mouse por encima de una tarjeta */
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ffcc !important; /* El borde se ilumina en cian */
+}
+
+.card-title {
+    color: #00ffcc !important; /* Títulos de las zonas en cian */
+}
+
+}
+
 
 .index{
     background-image: url('../IMG/Rapture_index_fondo.jpg');
@@ -36,6 +63,7 @@ hr {
 h1{
     text-align: center;
     color: var(--color_texto_1);
+
 }
 
 h2{
@@ -48,137 +76,34 @@ h3 {
     color: var(--color_texto_3);
 }
 
-a {
-    color: var(--color_cuaternario);
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color_acento);
+    gap: 2rem;
+    list-style: none;
+    padding: 1.5rem;
 }
 
+.nav-button {
+    background-color: #475569;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-button:hover {
+    background-color: #546173;
+}
+
+.fondo_formulario{
+    background-color: var(--color_secundario);
+}
 .video{
     display: block;
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
-}
-
-/* ==========================================
-            BOOTSTRAP - PERSONALIZACIONES
-   ========================================== */
-.sticky-top {
-    position: sticky;
-    top: 0;
-    z-index: 1020;
-}
-
-.banner-container {
-    position: relative;
-    background-color: var(--color_terciario);
-    overflow: hidden;
-}
-
-.banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color_primario);
-    opacity: 0.85;
-    z-index: 0;
-}
-
-.card .position-absolute {
-    position: absolute;
-    z-index: 2;
-}
-
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Navbar */
-.navbar {
-    background-color: var(--color_terciario);
-    border-bottom: 2px solid var(--color_acento);
-}
-
-.navbar-nav .nav-link {
-    background-color: var(--color_acento);
-    border-radius: 0.5rem;
-    font-weight: bold;
-    color: var(--color_texto_3);
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover, 
-.navbar-nav .nav-link.active {
-    background-color: var(--color_cuaternario);
-    color: var(--color_primario);
-}
-
-
-/* Tarjetas */
-.card {
-    background-color: var(--color_primario);
-    border: 1px solid var(--color_acento);
-    color: var(--color_texto_4);
-}
-
-.card-title {
-    color: var(--color_texto_2);
-}
-
-.card-img-top{
-    width: auto;
-    height: 30rem;
-}
-
-.imgcarousel{
-    width: auto;
-    height: 50rem;
-}
-
-/* Campos de Formulario */
-.form-control, 
-.form-select {
-    background-color: var(--color_secundario);
-    color: var(--color_primario);
-    border: 1px solid var(--color_acento);
-}
-
-.form-control::placeholder {
-    color: var(--color_acento);
-}
-
-/* Botones */
-.btn-primary {
-    background-color: var(--color_acento);
-    border-color: var(--color_acento);
-    color: var(--color_texto_3);
-    font-weight: bold;
-}
-
-.btn-primary:hover {
-    background-color: var(--color_cuaternario);
-    border-color: var(--color_cuaternario);
-    color: var(--color_primario);
-}
-
-.oculto { 
-            display: none; 
-        }
-
-/* Alertas */
-.alert-warning {
-    background-color: var(--color_terciario);
-    border-color: var(--color_cuaternario);
-    color: var(--color_texto_3);
-}
-
-/* Badges / Etiquetas */
-.badge {
-    background-color: var(--color_cuaternario);
-    color: var(--color_primario);
-    font-family: var(--fuente);
 }
