@@ -1,29 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-        content="Información sobre la tecnología presente en la ciudad submarina de Rapture.">
-
-    <title>Tecnología de Rapture</title>
+    <meta name="description" content="Rapture, la ciudad submarina ficticia del universo de BioShock: su historia, sus lugares y su tecnología.">
+    <title>Proyecto Rapture</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
-    <!-- Bootstrap 5 CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- CSS Propio -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
-
 <body>
-
-    <!-- ENCABEZADO -->
-
     <!-- Menú de navegación Navbar de Bootstrap con position: sticky -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark shadow">
@@ -49,86 +38,67 @@
     <div class="banner-container position-relative text-center py-5">
     <div class="banner-overlay"></div>
     <div class="position-relative z-1 container">
-            <h1>CONOZCAN RAPTURE</h1>
-            <h3 class="fs-5">La ciudad submarina más importante.</h3>
-            </div>
+        <h1>Conozcan Rapture</h1>
+        <p class="subtitulo">La ciudad submarina ficticia del universo de los videojuegos BioShock</p>
+    </div>
+    
+
     </div>
 
-    <hr>
-
     <main class="container my-5">
-        <h2>¿Esta cansado de que se metan con lo que es suyo?</h2>
+        <section class="container py-5" id="tarjetas">
+            <div class="row">
 
-        <p>¿Es usted un gran trabajador que se levanta cada dia y siempre hay un comunista, socialista, capitalista o religioso que chupa de su dinero?
-            ¿Acaso el hombre no tiene derecho al sudor de su propia frente? Pues en Rapture, creemos que lo tuyo es tuyo y de nadie más. 
-        </p>
-
-        <hr class="my-5">    
-
-        <h2>¿Acaso crees que eres apto para entrar?</h2>
-        <p>Esta ciudad da libertad a las mentes más brillantes a evolucionar y permite a inversores a tener una vida plena con negocios, por lo que no es facil entrar a esta hermosa ciudad.
-            Si estas harto de que siempren encuentren una forma de sacar parte de tus ganancias, eres inteligente o tienes capital, entonces la ciudad te espera con las puertas abiertas
-        </p>
-
-        <hr class="my-5">
-
-        <div class="container my-5 text-center">
-
-            <h2 class="mb-3 text-warning">Registros de Acceso Restringido</h2>
-            <button id="btnVerMas" class="btn btn-warning mb-4 px-4 py-2 font-weight-bold">Ver más</button>
-
-            <!-- Las tarjetas empiezan ocultas -->
-            <div id="contenedorTarjetas" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 oculto">
-                
-                <!-- La Ciudad -->
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-warning">La Ciudad</h5>
-                            <p class="card-text">Descubre la historia, arquitectura y los secretos detrás de su fundación.</p>
-                            <a href="ciudad.html" class="btn mt-auto btn-outline-warning">Explorar</a>
+                        <img src="img/ciudad.jpg" class="card-img-index" alt="La ciudad submarina de Rapture con el cartel Welcome to Rapture">
+                        <div class="card-body">
+                            <h2 class="card-title">La ciudad</h2>
+                            <p class="card-text">Una utopía construida bajo el mar que terminó en ruinas. Conocé su historia.</p>
+                            <button type="button" class="btn btn-outline-warning">Seguir leyendo</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Lugares de Interés -->
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-warning">Lugares de Interés</h5>
-                            <p class="card-text">Recorre los puntos emblemáticos y las zonas más destacadas.</p>
-                            <a href="lugares.html" class="btn mt-auto btn-outline-warning">Ver lugares</a>
+                        <img src="img/lugares.jpg" class="card-img-index" alt="Carteles de neón de los comercios de Rapture">
+                        <div class="card-body">
+                            <h2 class="card-title">Lugares de interés</h2>
+                            <p class="card-text">Distritos, parques y centros de entretenimiento que alguna vez fueron el orgullo de la ciudad.</p>
+                            <button type="button" class="btn btn-outline-warning">Seguir leyendo</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tecnología -->
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-warning">Tecnología</h5>
-                            <p class="card-text">Conoce los avances científicos, inventos y el desarrollo industrial.</p>
-                            <a href="tecnologia.html" class="btn mt-auto btn-outline-warning">Descubrir</a>
+                        <img src="img/tecnologia.jpg" class="card-img-index" alt="Edificios de Rapture iluminados bajo el agua">
+                        <div class="card-body">
+                            <h2 class="card-title">Tecnología</h2>
+                            <p class="card-text">Plásmidos, cámaras que reviven y guardianes blindados. Descubrí qué hizo posible Rapture.</p>
+                            <button type="button" class="btn btn-outline-warning">Seguir leyendo</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contacto -->
-                <div class="col">
+                <div class="col-12 col-md-6 col-lg-3">
                     <div class="card h-100">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-warning">Contacto</h5>
-                            <p class="card-text">Comunícate con nosotros para consultas, información o visitas.</p>
-                            <a href="contacto.html" class="btn mt-auto btn-outline-warning">Contactar</a>
+                        <img src="img/contacto.jpg" class="card-img-index" alt="Siluetas de personajes frente a la ciudad de Rapture">
+                        <div class="card-body">
+                            <h2 class="card-title">Contacto</h2>
+                            <p class="card-text">¿Tenés preguntas o ideas para el proyecto? Escribinos.</p>
+                            <button type="button" class="btn btn-outline-warning">Seguir leyendo</button>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </div>
+        </section>
 
+        
     </main>
-    
+
     <footer class="text-center py-4 mt-5 border-top border-warning">
         <small>
         <p>&copy; 1946 - 1958 Ryan Industries. Todos los derechos reservados.</p>
@@ -137,33 +107,6 @@
         </small>
     </footer>
 
-    
-    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Script para las tarjetas -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const btnVerMas = document.getElementById('btnVerMas');
-            const contenedorTarjetas = document.getElementById('contenedorTarjetas');
-
-            btnVerMas.addEventListener('click', () => {
-                // Clase "oculto"
-                contenedorTarjetas.classList.toggle('oculto');
-                
-                // Cambia el texto del botón según si está oculto o visible
-                if (contenedorTarjetas.classList.contains('oculto')) {
-                    btnVerMas.textContent = 'Ver más';
-                    btnVerMas.classList.remove('btn-outline-danger');
-                    btnVerMas.classList.add('btn-warning');
-                } else {
-                    btnVerMas.textContent = 'Ocultar';
-                    btnVerMas.classList.remove('btn-warning');
-                    btnVerMas.classList.add('btn-outline-danger');
-                }
-            });
-        });
-    </script>
-
 </body>
 </html>

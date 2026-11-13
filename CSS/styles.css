@@ -134,6 +134,11 @@ a {
     height: 30rem;
 }
 
+.card-img-index {
+    height: 200px;
+    object-fit: cover;
+}
+
 .imgcarousel{
     width: auto;
     height: 50rem;
