@@ -357,16 +357,47 @@
                     El ADAM puede considerarse como un tipo de cancer benigno, ya que elimina las celulas que el usuario posee para poder cambiarlas por otras celulas más inestables.
                 </p>
 
-                <ul class="list-group">
-                    <li class="list-group-item">Proceso de refinamiento del ADAM.</li>
-
-                    <li class="list-group-item list-group-item-success">Se recolecta las babosas marinas desde las profundidades del océano.</li>
-                    <li class="list-group-item list-group-item-danger">Se extrae el ADAM de las babosas, refinandolas para obtener el líquido rojo.</li>
-                    <li class="list-group-item list-group-item-info">Para el EVE, es el mismo proceso, pero es un diferente tipo de refinado para alcanzar ese color azulado.</li>
-                    <li class="list-group-item list-group-item-light">Y asi se obtiene el ADAM y el EVE.</li>
-
+        <section class="row justify-content-center mb-5">
+            <div class="col-12 col-lg-8">
+                <h3 class="mb-4 text-center">Proceso del ADAM</h3>
                     <br>
-</ul>
+                <div class="card p-4 shadow">
+                    <!-- Pregunta 1 -->
+                    <div class="Babosa mb-3 pb-3">
+                        <button class="ADAM btn btn-outline-warning w-100 text-start fw-bold fs-5">
+                            ¿De dónde proviene el ADAM?
+                        </button>
+                        <p class="EVE oculto mt-3 p-3 rounded">
+                           El ADAM se extrae de las babosas marinas que habitan en las profundidades del océano, para luego ser <strong>refinadas</strong>.
+                        </p>
+                        <hr>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="Babosa mb-3 pb-3">
+                        <button class="ADAM btn btn-outline-warning w-100 text-start fw-bold fs-5">
+                            ¿Existen varios tipos de refinado?
+                        </button>
+                        <p class="EVE oculto mt-3 p-3 rounded">
+                            Sí, existen varios tipos de refinado, pero el más conocido es el refinado rojo, que es el que se utiliza para crear los plasmidos.
+                            Mientras que el refinado azul es el que se utiliza para crear el EVE, que es el recurso que se necesita para poder utilizar los plasmidos activos.
+                        </p>
+                        <hr>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="Babosa mb-3 pb-3">
+                        <button class="ADAM btn btn-outline-warning w-100 text-start fw-bold fs-5">
+                            ¿Qué debo hacer en caso de que me quede sin ADAM?
+                        </button>
+                        <p class="EVE oculto mt-3 p-3 rounded">
+                            En ese caso, tendra que esperar a que las Little Sisters recolecten ADAM de los Splicers, o bien, puede buscar las babosas usted mismo si tiene el valor de adentrarse en las profundidades del océano. Pero tenga cuidado, ya que los Splicers son muy peligrosos y no dudaran en atacarlo si lo ven.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
             </article>
 
@@ -590,6 +621,35 @@
 
         <!-- Bootstrap 5 JS Bundle CDN (Corregido sin integridad conflictiva) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+         document.addEventListener('DOMContentLoaded', () => {
+            
+            const faqs = document.querySelectorAll('.Babosa');
+
+            faqs.forEach(faq => {
+                
+                const boton = faq.querySelector('.ADAM');
+                const respuesta = faq.querySelector('.EVE');
+
+              
+                boton.addEventListener('click', () => {
+                    const estabaOculto = respuesta.classList.contains('oculto');
+
+                   
+                    document.querySelectorAll('.Babosa .EVE').forEach(r => {
+                        r.classList.add('oculto');
+                    });
+
+                 
+                    if (estabaOculto) {
+                        respuesta.classList.remove('oculto');
+                    }
+                });
+            });
+        });
+
+    </script>
 </body>
 
 </html>
