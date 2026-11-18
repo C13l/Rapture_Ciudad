@@ -10,46 +10,10 @@
 }
 
 body{
-    background-color: var(--color_primario);
-    color: var(--color_texto_4);
-    font-family: "iceberg";
+    background-color: var(--color_primario) !important;
+    color: var(--color_texto_4) !important;
+    font-family: var(--fuente) !important;
     font-size: 16px;
-
-    /* Personalización del Acordeón (La Historia) */
-.accordion-item {
-    background-color: #071315 !important; /* Fondo casi negro para las pestañas */
-    border: 1px solid #1a3d42 !important; /* Borde sutil verde marino */
-}
-
-.accordion-button {
-    background-color: #0a181b !important; /* Botón cerrado oscuro */
-    color: #00ffcc !important; /* Texto de los títulos en verde neón/cian */
-}
-
-/* Cuando el acordeón se abre */
-.accordion-button:not(.collapsed) {
-    background-color: #112d32 !important; /* Fondo al abrirse */
-    color: #00ffcc !important; /* Mantiene el texto cian */
-    box-shadow: none !important;
-}
-
-/* Personalización de las Tarjetas (Zonas de la ciudad) */
-.card {
-    background-color: #071315 !important; /* Fondo oscuro igual al acordeón */
-    border: 1px solid #1a3d42 !important; /* Borde combinado */
-    transition: transform 0.2s; /* Efecto suave al pasar el mouse */
-}
-
-/* Efecto opcional: cuando pasas el mouse por encima de una tarjeta */
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #00ffcc !important; /* El borde se ilumina en cian */
-}
-
-.card-title {
-    color: #00ffcc !important; /* Títulos de las zonas en cian */
-}
-
 }
 
 
@@ -60,20 +24,20 @@ body{
     background-attachment: fixed;
 }
 
-h1{
+/* 2. Forzar la fuente Iceberg en TODOS los títulos e ignorar Bootstrap */
+h1 {
     text-align: center;
-    color: var(--color_texto_1);
-
+    color: var(--color_texto_1) !important;
 }
 
-h2{
+h2 {
     text-align: center;
-    color: var(--color_texto_2);
+    color: var(--color_texto_2) !important;
 }
 
 h3 {
     text-align: center;
-    color: var(--color_texto_3);
+    color: var(--color_texto_3) !important;
 }
 
 .nav-menu {
@@ -106,4 +70,39 @@ h3 {
     margin: 0 auto;
     max-width: 100%;
     height: auto;
+}
+
+#acordeonRapture .accordion-item {
+    --bs-accordion-bg: #071315;
+    --bs-accordion-border-color: #1a3d42;
+    --bs-accordion-color: var(--color_texto_4);
+}
+
+#acordeonRapture .accordion-button {
+    --bs-accordion-btn-bg: #0a181b;
+    --bs-accordion-btn-color: #00ffcc;
+    --bs-accordion-active-bg: #112d32;
+    --bs-accordion-active-color: #00ffcc;
+    --bs-accordion-btn-focus-box-shadow: none;
+    font-family: var(--fuente);
+}
+
+section .card {
+    --bs-card-bg: #071315;
+    --bs-card-border-color: #1a3d42;
+    --bs-card-color: var(--color_texto_4);
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+section .card:hover {
+    transform: translateY(-5px);
+    --bs-card-border-color: #00ffcc;
+}
+
+section .card .card-title {
+    --bs-card-title-color: #00ffcc;
+}
+
+.oculto{
+    display: none;
 }

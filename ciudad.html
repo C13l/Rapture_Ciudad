@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">La Ciudad</a></li>
                         <li class="nav-item"><a class="nav-link" href="lugares.html">Lugares de Interés</a></li>
                         <li class="nav-item"><a class="nav-link" href="tecnologia.html">Tecnología</a></li>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
             </div>
@@ -56,15 +56,15 @@
                     </video>
             </div>
 
-            <p class="fw-bold">historia se divide en tres grandes eras:</p>
+            <h2 class="border-bottom pb-2">Historia se divide en tres grandes eras:</h2>
 
             <!-- Componente Accordion de Bootstrap -->
             <div class="accordion shadow" id="acordeonRapture">
                 
                 <!-- ERA 1 -->
-                <div class="accordion-item bg-secondary text-light">
+                <div class="accordion-item>
                     <h3 class="accordion-header">
-                        <button class="accordion-button bg-dark text-info fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eraEsplendor" aria-expanded="false" aria-controls="eraEsplendor">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eraEsplendor" aria-expanded="false" aria-controls="eraEsplendor">
                             1. Esplendor (1946-1955)
                         </button>
                     </h3>
@@ -76,9 +76,9 @@
                 </div>
 
                 <!-- ERA 2 -->
-                <div class="accordion-item bg-secondary text-light">
+                <div class="accordion-item>
                     <h3 class="accordion-header">
-                        <button class="accordion-button bg-dark text-info fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eraAdam" aria-expanded="false" aria-controls="eraAdam">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eraAdam" aria-expanded="false" aria-controls="eraAdam">
                             2. Descubrimiento del ADAM
                         </button>
                     </h3>
@@ -90,9 +90,9 @@
                 </div>
 
                 <!-- ERA 3 -->
-                <div class="accordion-item bg-secondary text-light">
+                <div class="accordion-item>
                     <h3 class="accordion-header">
-                        <button class="accordion-button bg-dark text-info fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eraCaida" aria-expanded="false" aria-controls="eraCaida">
+                        <button class="accordion-button fw-bold collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eraCaida" aria-expanded="false" aria-controls="eraCaida">
                             3. Caída (Nochebuena de 1958)
                         </button>
                     </h3>
@@ -109,7 +109,7 @@
     <hr>
 
         <section>
-            <h2>Identidad y características</h2>
+            <h2 class="border-bottom pb-2">Identidad y características</h2>
 
             <p>
                 Rapture se caracteriza por encontrarse completamente bajo el agua.
@@ -129,61 +129,54 @@
 
     <hr>
 
-<!-- Sección Zonas (Cumple con: Grilla, Comportamiento Responsivo, Gutters y Cards h-100) -->
         <section class="mb-5">
-            <h2 class="border-bottom pb-2 mb-4">Zonas de la ciudad</h2>
-            
-            <!-- 'row-cols-1' (1 col en celular), 'row-cols-md-2' (2 en tablet), 'row-cols-lg-4' (4 en PC). El 'g-4' es el Gutter (espacio entre ellas) -->
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                
-                <!-- Tarjeta 1 -->
-                <div class="col">
-                    <!-- El 'h-100' hace que todas las tarjetas midan exactamente lo mismo de alto -->
-                    <div class="card h-100 bg-black text-light border-secondary">
-                        <div class="card-body">
-                            <h3 class="card-title h5 text-info">Welcome Center</h3>
-                            <p class="card-text small mb-0">Es una de las primeras zonas de ingreso a Rapture. Allí los visitantes comienzan a conocer la ciudad.</p>
-                        </div>
-                    </div>
+    <h2 class="border-bottom pb-2 mb-4">Zonas de la ciudad</h2>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title h5">Welcome Center</h3>
+                    <p class="card-text small mb-0">Es una de las primeras zonas de ingreso a Rapture. Allí los visitantes comienzan a conocer la ciudad.</p>
                 </div>
-
-                <!-- Tarjeta 2 -->
-                <div class="col">
-                    <div class="card h-100 bg-black text-light border-secondary">
-                        <div class="card-body">
-                            <h3 class="card-title h5 text-info">Medical Pavilion</h3>
-                            <p class="card-text small mb-0">Es una zona dedicada principalmente a hospitales, medicina y tratamientos científicos.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 3 -->
-                <div class="col">
-                    <div class="card h-100 bg-black text-light border-secondary">
-                        <div class="card-body">
-                            <h3 class="card-title h5 text-info">Neptune's Bounty</h3>
-                            <p class="card-text small mb-0">Es una zona relacionada con el puerto, la pesca y el movimiento de productos dentro de la ciudad.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 4 -->
-                <div class="col">
-                    <div class="card h-100 bg-black text-light border-secondary">
-                        <div class="card-body">
-                            <h3 class="card-title h5 text-info">Fort Frolic</h3>
-                            <p class="card-text small mb-0">Es uno de los principales sectores culturales y de entretenimiento. Allí se encuentran teatros, comercios y espacios artísticos.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title h5">Medical Pavilion</h3>
+                    <p class="card-text small mb-0">Es una zona dedicada principalmente a hospitales, medicina y tratamientos científicos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title h5">Neptune's Bounty</h3>
+                    <p class="card-text small mb-0">Es una zona relacionada con el puerto, la pesca y el movimiento de productos dentro de la ciudad.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title h5">Fort Frolic</h3>
+                    <p class="card-text small mb-0">Es uno de los principales sectores culturales y de entretenimiento. Allí se encuentran teatros, comercios y espacios artísticos.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <hr>
 
         <section>
-            <h2>Costumbres y vida en Rapture</h2>
+            <h2 class="border-bottom pb-2">Costumbres y vida en Rapture</h2>
 
             <p>
                 La vida en Rapture estaba muy relacionada con el arte,
@@ -203,7 +196,7 @@
     <hr>
 
         <section>
-            <h2>Datos principales de Rapture</h2>
+            <h2 class="border-bottom pb-2">Datos principales de Rapture</h2>
 
             <dl>
 
@@ -234,14 +227,27 @@
 
     <hr>
 
-        <aside>
-            <h2>Dato curioso</h2>
-
+        <aside class="my-5">
+            <h2 class="my-4">Dato curioso</h2>
             <p>
-                Los distintos sectores de Rapture están unidos por túneles
-                y sistemas de transporte que permiten desplazarse por la ciudad
-                sin salir al océano.
+                Un dato curioso sobre la arquitectura y los túneles de Rapture en BioShock es que el diseño de sus pasillos submarinos y edificios está inspirado en el Rockefeller Center de Nueva York, pero adaptado de forma extrema para resistir la presión abisal.
+                Para que los habitantes pudieran moverse entre sectores sin salir al océano, los desarrolladores diseñaron un sistema de transporte muy particular con varios detalles ocultos:
             </p>
+
+            <div id="contenido-curioso" class="oculto">
+                <ul>
+                    <li><strong>Batisfera (Metro Atlántico):</strong>
+                         Es el sistema de transporte principal que conecta los distintos distritos. Lo curioso es que, según la historia del juego, las batisferas fueron codificadas genéticamente por Andrew Ryan durante la guerra civil para que solo él o personas con su mismo código genético pudieran usarlas, lo que explica por qué el protagonista puede viajar en ellas desde el principio.</li>
+                    <li><strong>Túneles de vidrio corrugado:</strong> 
+                        Muchos de los pasillos que conectan los edificios están hechos de vidrio y acero reforzado. En el juego se explica que usaron un material ficticio llamado "Aluminio Transparente" o aleaciones especiales con formas curvas y arcos de estilo Art Déco no solo por estética, sino porque las formas redondeadas distribuyen mejor la inmensa presión del fondo del Atlántico Norte.</li>
+                    <li><strong>Puertas de mamparo automáticas:</strong> 
+                        Los túneles cuentan con compuertas herméticas diseñadas para sellar un sector automáticamente si se detecta una filtración de agua, sacrificando una zona para salvar el resto de la ciudad.
+                    </li>
+                    <li><strong>Tubo neumático (Pneumo):</strong> 
+                        Además del transporte de personas, toda la ciudad está conectada por una red de tubos neumáticos que enviaban paquetes, correo y suministros de un edificio a otro a gran velocidad, un sistema muy real en las grandes ciudades de los años 40 y 50 en las que se basa el juego.</li>
+                </ul>
+            </div>
+            <button id="btn-curioso" class="btn btn-outline-warning mt-2" type="button">Leer más</button>
         </aside>
 
     </main>
@@ -258,6 +264,8 @@
     
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="JS/ciudad.js"></script>
 
 </body>
 
