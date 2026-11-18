@@ -50,61 +50,57 @@
     </div>
 
     <main class="container my-5">
-        <section>
+        <section class="row justify-content-center mb-5">
             <!-- Contenedor de Bootstrap para hacer el video responsivo -->
             <div class="ratio ratio-16x9 my-4 shadow rounded overflow-hidden" style="max-width: 700px; margin: 0 auto;">
                 <video controls>
                     <source src="./Video/La Historia de Rapture - La Utopía y Distopía del Capitalismo.mp4" type="video/mp4">Tu navegador no soporta la reproducción de video.
                 </video>
             </div>
-
-            <br>
-
-            <hr class="my-5">
             
-            <h2 class="my-5">La historia se divide en tres grandes eras:</h2>
-
-            <section class="row justify-content-center mb-5">
-                <div class="col-12 col-lg-8">
-                    <div class="card p-4 shadow">
-                        
-                        <!-- ERA 1 -->
-                        <div class="mb-3 pb-3">
-                            <button class="btn btn-outline-warning w-100 text-start fw-bold fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#eraEsplendor" aria-expanded="true" aria-controls="eraEsplendor">
-                                1. Esplendor (1946-1955)
-                            </button>
-                            <div id="eraEsplendor" class="collapse show mt-3 p-3 rounded" data-bs-parent="#acordeonRapture">
-                                <p class="mb-0">Rapture floreció como una sociedad opulenta y sumamente avanzada. La ciencia y el arte alcanzaron niveles nunca vistos en la superficie.</p>
-                            </div>
-                            <hr class="mt-3">
-                        </div>
-
-                        <!-- ERA 2 -->
-                        <div class="mb-3 pb-3">
-                            <button class="btn btn-outline-warning w-100 text-start fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eraAdam" aria-expanded="false" aria-controls="eraAdam">
-                                2. Descubrimiento del ADAM
-                            </button>
-                            <div id="eraAdam" class="collapse mt-3 p-3 rounded" data-bs-parent="#acordeonRapture">
-                                <p class="mb-0">El hallazgo de una sustancia extraída de una babosa marina que permitía reescribir el ADN humano (otorgando superpoderes o "Plásmidos") rompió el equilibrio social. El contrabando, la adicción al ADAM y la enorme brecha económica entre la élite y la clase trabajadora desestabilizaron la urbe.</p>
-                            </div>
-                            <hr class="mt-3">
-                        </div>
-
-                        <!-- ERA 3 -->
-                        <div class="mb-3 pb-3">
-                            <button class="btn btn-outline-warning w-100 text-start fw-bold fs-5 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eraCaida" aria-expanded="false" aria-controls="eraCaida">
-                                3. Caída (Nochebuena de 1958)
-                            </button>
-                            <div id="eraCaida" class="collapse mt-3 p-3 rounded" data-bs-parent="#acordeonRapture">
-                                <p class="mb-0">Una revuelta armada masiva estalló durante las fiestas de fin de año. El conflicto civil destruyó la infraestructura, Ryan se convirtió en el dictador que juró nunca ser y la adicción biológica transformó a la población en mutantes psicóticos (Splicers), dejando a la ciudad en un estado de ruina perpetua.</p>
-                            </div>
-                        </div>
-
+            <hr>
+            <h2 class="my-5">Historia se divide en tres grandes eras:</h2>
+        <!-- Sección de las Eras de Rapture -->
+            <div class="col-12 col-lg-8">
+                <div class="card p-4 shadow">
+                    
+                    <!-- ERA 1 -->
+                    <div class="eras mb-3 pb-3">
+                        <button class="unaera btn btn-outline-warning w-100 text-start fw-bold fs-5">
+                            1. Esplendor (1946-1955)
+                        </button>
+                        <p class="desc oculto mt-3 p-3 rounded">
+                            Rapture floreció como una sociedad opulenta y sumamente avanzada. La ciencia y el arte alcanzaron niveles nunca vistos en la superficie.
+                        </p>
+                        <hr>
                     </div>
-                </div>
-            </section>
 
-        <hr class="my-5">
+                    <!-- ERA 2 -->
+                    <div class="eras mb-3 pb-3">
+                        <button class="unaera btn btn-outline-warning w-100 text-start fw-bold fs-5">
+                            2. Descubrimiento del ADAM
+                        </button>
+                        <p class="desc oculto mt-3 p-3 rounded">
+                            El hallazgo de una sustancia extraída de una babosa marina que permitía reescribir el ADN humano (otorgando superpoderes o "Plásmidos") rompió el equilibrio social. El contrabando, la adicción al ADAM y la enorme brecha económica entre la élite y la clase trabajadora desestabilizaron la urbe.
+                        </p>
+                        <hr>
+                    </div>
+
+                    <!-- ERA 3 -->
+                    <div class="eras mb-3 pb-3">
+                        <button class="unaera btn btn-outline-warning w-100 text-start fw-bold fs-5">
+                            3. Caída (Nochebuena de 1958)
+                        </button>
+                        <p class="desc oculto mt-3 p-3 rounded">
+                            Una revuelta armada masiva estalló durante las fiestas de fin de año. El conflicto civil destruyó la infraestructura, Ryan se convirtió en el dictador que juró nunca ser y la adicción biológica transformó a la población en mutantes psicóticos (Splicers), dejando a la ciudad en un estado de ruina perpetua.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    <hr>
 
         <section>
             <h2 class="my-5">Identidad y características</h2>
@@ -120,61 +116,57 @@
             </p>
         </section>
 
-        <hr class="my-5">
-
-        <!-- Sección Zonas -->
+        <hr>
+        
         <section class="mb-5">
-            <h2 class="my-5">Zonas de la ciudad</h2>
-
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                
-                <!-- Tarjeta 1 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Welcome Center</h3>
-                            <p class="card-text small mb-0">Es una de las primeras zonas de ingreso a Rapture. Allí los visitantes comienzan a conocer la ciudad.</p>
-                        </div>
-                    </div>
+    <h2 class="my-5">Zonas de la ciudad</h2>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title h5">Welcome Center</h3>
+                    <p class="card-text small mb-0">Es una de las primeras zonas de ingreso a Rapture. Allí los visitantes comienzan a conocer la ciudad.</p>
                 </div>
-
-                <!-- Tarjeta 2 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Medical Pavilion</h3>
-                            <p class="card-text small mb-0">Es una zona dedicada principalmente a hospitales, medicina y tratamientos científicos.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 3 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Neptune's Bounty</h3>
-                            <p class="card-text small mb-0">Es una zona relacionada con el puerto, la pesca y el movimiento de productos dentro de la ciudad.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 4 -->
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="card-title h5">Fort Frolic</h3>
-                            <p class="card-text small mb-0">Es uno de los principales sectores culturales y de entretenimiento. Allí se encuentran teatros, comercios y espacios artísticos.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
+        </div>
 
-        <hr class="my-5">
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title h5">Medical Pavilion</h3>
+                    <p class="card-text small mb-0">Es una zona dedicada principalmente a hospitales, medicina y tratamientos científicos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title h5">Neptune's Bounty</h3>
+                    <p class="card-text small mb-0">Es una zona relacionada con el puerto, la pesca y el movimiento de productos dentro de la ciudad.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title h5">Fort Frolic</h3>
+                    <p class="card-text small mb-0">Es uno de los principales sectores culturales y de entretenimiento. Allí se encuentran teatros, comercios y espacios artísticos.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <hr>
 
         <section>
             <h2 class="my-5">Costumbres y vida en Rapture</h2>
+
             <p>
                 La vida en Rapture estaba muy relacionada con el arte, la ciencia, los negocios y la búsqueda de nuevas ideas.
             </p>
@@ -187,10 +179,11 @@
             </ul>
         </section>
 
-        <hr class="my-5">
+        <hr>
 
         <section>
             <h2 class="my-5">Datos principales de Rapture</h2>
+
             <dl>
                 <dt><strong>Fundador:</strong></dt>
                 <dd>Andrew Ryan</dd>
@@ -211,11 +204,27 @@
 
         <hr class="my-5">
 
-        <aside>
+        <aside class="my-5">
             <h2 class="my-5">Dato curioso</h2>
             <p>
-                Los distintos sectores de Rapture están unidos por túneles y sistemas de transporte que permiten desplazarse por la ciudad sin salir al océano.
+                Un dato curioso sobre la arquitectura y los túneles de Rapture en BioShock es que el diseño de sus pasillos submarinos y edificios está inspirado en el Rockefeller Center de Nueva York, pero adaptado de forma extrema para resistir la presión abisal.
+                Para que los habitantes pudieran moverse entre sectores sin salir al océano, los desarrolladores diseñaron un sistema de transporte muy particular con varios detalles ocultos:
             </p>
+
+            <div id="contenido-curioso" class="oculto">
+                <ul>
+                    <li><strong>Batisfera (Metro Atlántico):</strong>
+                         Es el sistema de transporte principal que conecta los distintos distritos. Lo curioso es que, según la historia del juego, las batisferas fueron codificadas genéticamente por Andrew Ryan durante la guerra civil para que solo él o personas con su mismo código genético pudieran usarlas, lo que explica por qué el protagonista puede viajar en ellas desde el principio.</li>
+                    <li><strong>Túneles de vidrio corrugado:</strong> 
+                        Muchos de los pasillos que conectan los edificios están hechos de vidrio y acero reforzado. En el juego se explica que usaron un material ficticio llamado "Aluminio Transparente" o aleaciones especiales con formas curvas y arcos de estilo Art Déco no solo por estética, sino porque las formas redondeadas distribuyen mejor la inmensa presión del fondo del Atlántico Norte.</li>
+                    <li><strong>Puertas de mamparo automáticas:</strong> 
+                        Los túneles cuentan con compuertas herméticas diseñadas para sellar un sector automáticamente si se detecta una filtración de agua, sacrificando una zona para salvar el resto de la ciudad.
+                    </li>
+                    <li><strong>Tubo neumático (Pneumo):</strong> 
+                        Además del transporte de personas, toda la ciudad está conectada por una red de tubos neumáticos que enviaban paquetes, correo y suministros de un edificio a otro a gran velocidad, un sistema muy real en las grandes ciudades de los años 40 y 50 en las que se basa el juego.</li>
+                </ul>
+            </div>
+            <button id="btn-curioso" class="btn btn-outline-warning mt-2" type="button">Leer más</button>
         </aside>
 
     </main>
@@ -231,6 +240,49 @@
     
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const btnCurioso = document.getElementById("btn-curioso");
+        const contenidoCurioso = document.getElementById("contenido-curioso");
+
+        btnCurioso.addEventListener("click", function () {
+            // Alterna la clase 'oculto' (si está la saca para mostrar, si no está la pone para ocultar)
+            contenidoCurioso.classList.toggle("oculto");
+
+            // Cambia el texto del botón según si quedó oculto o visible
+            if (contenidoCurioso.classList.contains("oculto")) {
+                btnCurioso.textContent = "Leer más";
+            } else {
+                btnCurioso.textContent = "Leer menos";
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+                    // 1. Usar querySelectorAll para obtener todos los .eras
+                    const eras = document.querySelectorAll('.eras');
+
+                    eras.forEach(eras => {
+                        // Obtener el botón y la respuesta dentro de cada bloque .eras
+                        const boton = eras.querySelector('.unaera');
+                        const respuesta = eras.querySelector('.desc');
+
+                        // 2. Asignar event listener de "click" a cada botón
+                        boton.addEventListener('click', () => {
+                            const estabaOculto = respuesta.classList.contains('oculto');
+
+                            // 3. Al hacer clic: cerrar todas las respuestas
+                            document.querySelectorAll('.eras .desc').forEach(r => {
+                                r.classList.add('oculto');
+                            });
+
+                            // Y luego abrir la clicada (si estaba cerrada)
+                            if (estabaOculto) {
+                                respuesta.classList.remove('oculto');
+                            }
+                        });
+                    });
+                });
+    </script>
 
 </body>
 
