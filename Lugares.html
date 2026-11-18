@@ -49,11 +49,11 @@
         <h2 class="mb-3">Lugares De Interés</h2>
         <p class="text-center mb-4">Lista de los datos históricos y argumentales más importantes de cada zona de la ciudad submarina. Tocá el nombre de cada lugar para ver su información.</p>
 
-        <!-- Grid de Tarjetas (4 Columnas): las tarjetas se generan con JavaScript -->
+        <!-- Grid de Tarjetas (4 Columnas) -->
         <div id="grilla-lugares" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 align-items-start"></div>
         <p id="msg-error" class="text-danger text-center mt-3"></p>
 
-        <!-- Datos de los lugares (estructura original): el JavaScript lee estas tarjetas y crea las del grid -->
+        <!-- Datos de los lugares : el JavaScript lee estas tarjetas y crea las del grid -->
         <div id="datos-lugares" hidden>
 
             <!-- 1. Welcome to Rapture -->
@@ -361,7 +361,7 @@
     <!-- JavaScript Personalizado -->
     <script>
 
-        // Leer los datos de cada lugar desde las tarjetas de #datos-lugares
+        // Lee los datos de cada lugar desde las tarjetas de #datos-lugares
         const datos = document.querySelectorAll('#datos-lugares .col');
         const lugares = [];
 
@@ -382,11 +382,11 @@
         const grilla = document.getElementById('grilla-lugares');
         const msgError = document.getElementById('msg-error');
 
-        // Crear una tarjeta por cada lugar
+        // Crea una tarjeta por cada lugar
         for (let i = 0; i < lugares.length; i++) {
             const lugar = lugares[i];
 
-            // Validar que no falte ningún dato
+            // Valida que no falte ningún dato
             if (lugar.nombre.trim() === '' || lugar.imagen.trim() === '' || lugar.alt.trim() === '' || lugar.dato1.trim() === '' || lugar.dato2.trim() === '') {
                 msgError.textContent = 'Hay lugares con datos incompletos.';
                 continue;
@@ -432,7 +432,7 @@
             const li2 = document.createElement('li');
             li2.textContent = lugar.dato2;
 
-            // Armar la tarjeta de adentro hacia afuera
+            // Arma la tarjeta de adentro hacia afuera
             lista.appendChild(li1);
             lista.appendChild(li2);
             respuesta.appendChild(lista);
@@ -452,12 +452,12 @@
             botones[i].addEventListener('click', function () {
                 const estabaOculto = respuestas[i].classList.contains('oculto');
 
-                // Cerrar todos
+                // Cierra todos
                 for (let j = 0; j < respuestas.length; j++) {
                     respuestas[j].classList.add('oculto');
                 }
 
-                // Abrir el clicado (si estaba cerrado)
+                // Abre el clicado (si estaba cerrado)
                 if (estabaOculto) {
                     respuestas[i].classList.remove('oculto');
                 }
