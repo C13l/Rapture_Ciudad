@@ -50,7 +50,7 @@
         <p class="text-center mb-4">Lista de los datos históricos y argumentales más importantes de cada zona de la ciudad submarina. Tocá el nombre de cada lugar para ver su información.</p>
 
         <!-- Grid de Tarjetas (4 Columnas): las tarjetas se generan con JavaScript -->
-        <div id="grilla-lugares" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4"></div>
+        <div id="grilla-lugares" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 align-items-start"></div>
         <p id="msg-error" class="text-danger text-center mt-3"></p>
     </main>
 
@@ -186,7 +186,7 @@
             col.className = 'col faq';
 
             const card = document.createElement('div');
-            card.className = 'card shadow-sm h-100 overflow-hidden';
+            card.className = 'card shadow-sm overflow-hidden';
 
             // Imagen
             const img = document.createElement('img');
@@ -208,14 +208,12 @@
             boton.style.overflow = 'hidden';
             boton.textContent = lugar.nombre;
 
-            // Información del lugar (empieza oculta, se muestra sobre la imagen)
+            // Información del lugar (empieza oculta, se despliega hacia abajo)
             const respuesta = document.createElement('div');
-            respuesta.className = 'respuesta oculto position-absolute top-0 start-0 w-100 overflow-auto p-3';
-            respuesta.style.height = '200px';
-            respuesta.style.backgroundColor = 'var(--color_primario)';
+            respuesta.className = 'respuesta oculto';
 
             const lista = document.createElement('ul');
-            lista.className = 'card-text small ps-3 mb-0';
+            lista.className = 'card-text small ps-3 mb-0 mt-3';
 
             const li1 = document.createElement('li');
             li1.textContent = lugar.dato1;
