@@ -18,7 +18,7 @@
 
     <header class="sticky-top"> 
         <!-- Barra de Navegación -->
-        <nav class="navbar navbar-expand-lg navbar-dark shadow mb-4">
+        <nav class="navbar navbar-expand-lg navbar-dark shadow">
             <div class="container-fluid">
                 <a class="navbar-brand fw-bold" href="index.html">Rapture Industries</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,239 +37,305 @@
         </nav>
 
     </header>
-        <div class="text-center my-4 px-3">
+
+    <div class="banner-container position-relative text-center py-5">
+        <div class="banner-overlay"></div>
+        <div class="position-relative z-1 container">
             <h1>Lugares de la Ciudad de Rapture</h1>
         </div>
-    
-        <hr>
+    </div>
 
-    <main class="container my-4">
+<main class="container my-4">
         <h2 class="mb-3">Lugares De Interés</h2>
-        <p class="text-center mb-4">Lista de los datos históricos y argumentales más importantes de cada zona de la ciudad submarina.</p>
+        <p class="text-center mb-4">Lista de los datos históricos y argumentales más importantes de cada zona de la ciudad submarina. Tocá el nombre de cada lugar para ver su información.</p>
         
         <!-- Grid de Tarjetas (4 Columnas) -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 align-items-start">
             
             <!-- 1. Welcome to Rapture -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/Welcome_to_Rapture_Door.webp" class="card-img-top" alt="Entrada a Rapture" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Welcome to Rapture (Centro de Bienvenida)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>Es el punto de entrada a la ciudad a través del faro de la superficie.</li>
-                            <li>Tiene el famoso cartel con la frase fundacional de Andrew Ryan: "No Gods or Kings. Only Man".</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar1" aria-expanded="false" aria-controls="lugar1">
+                            Welcome to Rapture (Centro de Bienvenida)
+                        </button>
+                        <div class="collapse" id="lugar1">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>Es el punto de entrada a la ciudad a través del faro de la superficie.</li>
+                                <li>Tiene el famoso cartel con la frase fundacional de Andrew Ryan: "No Gods or Kings. Only Man".</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 2. Medical Pavilion -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/Medical_Pavilion_Foyer.webp" class="card-img-top" alt="Pabellón Médico" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Medical Pavilion (Pabellón Médico)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>Originalmente era el centro de salud, odontología y cirugías estéticas de alta gama.</li>
-                            <li>Cayó en la ruina y la locura bajo el control del Dr. J.S. Steinman, quien usaba los plásmidos para desfigurar y operar horriblemente a sus pacientes.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar2" aria-expanded="false" aria-controls="lugar2">
+                            Medical Pavilion (Pabellón Médico)
+                        </button>
+                        <div class="collapse" id="lugar2">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>Originalmente era el centro de salud, odontología y cirugías estéticas de alta gama.</li>
+                                <li>Cayó en la ruina y la locura bajo el control del Dr. J.S. Steinman, quien usaba los plásmidos para desfigurar y operar horriblemente a sus pacientes.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 3. Neptune's Bounty -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/Lower_wharf_Neptune.webp" class="card-img-top" alt="Puerto Pesquero" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Neptune's Bounty (El Regalo de Neptuno)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>El puerto pesquero, muelle y centro de distribución de mariscos de la ciudad.</li>
-                            <li>Se convirtió en la base de operaciones de Frank Fontaine para el contrabando ilegal de objetos de la superficie.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar3" aria-expanded="false" aria-controls="lugar3">
+                            Neptune's Bounty (El Regalo de Neptuno)
+                        </button>
+                        <div class="collapse" id="lugar3">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>El puerto pesquero, muelle y centro de distribución de mariscos de la ciudad.</li>
+                                <li>Se convirtió en la base de operaciones de Frank Fontaine para el contrabando ilegal de objetos de la superficie.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 4. Arcadia -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/Arcadia_06.webp" class="card-img-top" alt="Arcadia" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Arcadia</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>Un gigantesco bosque artificial e invernadero hidropónico encerrado bajo cúpulas de vidrio.</li>
-                            <li>Es el pulmón verde de Rapture; fue creado por la científica Julie Langford para generar todo el oxígeno de la ciudad.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar4" aria-expanded="false" aria-controls="lugar4">
+                            Arcadia
+                        </button>
+                        <div class="collapse" id="lugar4">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>Un gigantesco bosque artificial e invernadero hidropónico encerrado bajo cúpulas de vidrio.</li>
+                                <li>Es el pulmón verde de Rapture; fue creado por la científica Julie Langford para generar todo el oxígeno de la ciudad.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 5. Fort Frolic -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/fort frolic.webp" class="card-img-top" alt="Fort Frolic" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Fort Frolic</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>El distrito comercial de lujo, teatros, tiendas de ropa y galerías de arte.</li>
-                            <li>Quedó completamente aislado del resto de la ciudad bajo el control dictatorial y psicópata de Sander Cohen, el artista más famoso de Rapture.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar5" aria-expanded="false" aria-controls="lugar5">
+                            Fort Frolic
+                        </button>
+                        <div class="collapse" id="lugar5">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>El distrito comercial de lujo, teatros, tiendas de ropa y galerías de arte.</li>
+                                <li>Quedó completamente aislado del resto de la ciudad bajo el control dictatorial y psicópata de Sander Cohen, el artista más famoso de Rapture.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 6. Hephaestus -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/hephaestus.webp" class="card-img-top" alt="Hephaestus" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Hephaestus (Hefesto)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>La planta central de energía geotérmica que aprovecha el calor de las fosas oceánicas para dar luz y electricidad a toda la ciudad.</li>
-                            <li>Aquí se encuentra la oficina principal y el búnker de control de Andrew Ryan.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar6" aria-expanded="false" aria-controls="lugar6">
+                            Hephaestus (Hefesto)
+                        </button>
+                        <div class="collapse" id="lugar6">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>La planta central de energía geotérmica que aprovecha el calor de las fosas oceánicas para dar luz y electricidad a toda la ciudad.</li>
+                                <li>Aquí se encuentra la oficina principal y el búnker de control de Andrew Ryan.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 7. Apollo Square -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/Apollo square.webp" class="card-img-top" alt="Apollo Square" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Apollo Square (Plaza Apolo)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>Un barrio residencial originalmente destinado a la clase trabajadora de la ciudad.</li>
-                            <li>Durante la guerra civil, Ryan lo transformó en un gueto y campo de concentración fortificado para encerrar a los disidentes políticos.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar7" aria-expanded="false" aria-controls="lugar7">
+                            Apollo Square (Plaza Apolo)
+                        </button>
+                        <div class="collapse" id="lugar7">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>Un barrio residencial originalmente destinado a la clase trabajadora de la ciudad.</li>
+                                <li>Durante la guerra civil, Ryan lo transformó en un gueto y campo de concentración fortificado para encerrar a los disidentes políticos.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 8. Point Prometheus -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/Point_Prometheus_Main_Hall.webp" class="card-img-top" alt="Point Prometheus" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Point Prometheus (Punto Prometeo)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>El complejo de laboratorios científicos avanzados de Fontaine Futuristics.</li>
-                            <li>Fue el lugar exacto donde se descubrió el ADAM, se fabricaron los plásmidos comerciales y se creó el proceso de conversión para los Big Daddies y las Little Sisters.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar8" aria-expanded="false" aria-controls="lugar8">
+                            Point Prometheus (Punto Prometeo)
+                        </button>
+                        <div class="collapse" id="lugar8">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>El complejo de laboratorios científicos avanzados de Fontaine Futuristics.</li>
+                                <li>Fue el lugar exacto donde se descubrió el ADAM, se fabricaron los plásmidos comerciales y se creó el proceso de conversión para los Big Daddies y las Little Sisters.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 9. Adonis Luxury Resort -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/Adonis_luxury_resort098.webp" class="card-img-top" alt="Adonis Luxury Resort" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Adonis Luxury Resort</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>Un hotel y balneario termal de altísimo nivel construido al borde de la fosa marina para la élite de la ciudad.</li>
-                            <li>Es el lugar donde despierta el protagonista (Subject Delta) tras pasar diez años inconsciente.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar9" aria-expanded="false" aria-controls="lugar9">
+                            Adonis Luxury Resort
+                        </button>
+                        <div class="collapse" id="lugar9">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>Un hotel y balneario termal de altísimo nivel construido al borde de la fosa marina para la élite de la ciudad.</li>
+                                <li>Es el lugar donde despierta el protagonista (Subject Delta) tras pasar diez años inconsciente.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 10. Atlantic Express -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/Atlantic_Express_Entrance.webp" class="card-img-top" alt="Atlantic Express" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Atlantic Express</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>La estación central de trenes y la red de ferrocarriles submarinos que conectaban las zonas industriales.</li>
-                            <li>Era el principal medio de transporte de carga y pasajeros antes de que la guerra civil destruyera las vías.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar10" aria-expanded="false" aria-controls="lugar10">
+                            Atlantic Express
+                        </button>
+                        <div class="collapse" id="lugar10">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>La estación central de trenes y la red de ferrocarriles submarinos que conectaban las zonas industriales.</li>
+                                <li>Era el principal medio de transporte de carga y pasajeros antes de que la guerra civil destruyera las vías.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 11. Ryan Amusements -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/3b_copy_copy.webp" class="card-img-top" alt="Ryan Amusements" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Ryan Amusements</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>Un parque de atracciones y museo propagandístico diseñado personalmente por Andrew Ryan.</li>
-                            <li>Su objetivo era adoctrinar a los niños de la ciudad para que le tuvieran miedo a la superficie y odiaran a los "parásitos" del mundo exterior.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar11" aria-expanded="false" aria-controls="lugar11">
+                            Ryan Amusements
+                        </button>
+                        <div class="collapse" id="lugar11">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>Un parque de atracciones y museo propagandístico diseñado personalmente por Andrew Ryan.</li>
+                                <li>Su objetivo era adoctrinar a los niños de la ciudad para que le tuvieran miedo a la superficie y odiaran a los "parásitos" del mundo exterior.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 12. Pauper's Drop -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/PaupersDrop_03.webp" class="card-img-top" alt="Pauper's Drop" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Pauper's Drop (La Guarida del Pobre)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>Un barrio marginal, hacinado y decadente construido en los callejones traseros de la infraestructura del tren.</li>
-                            <li>Se formó con la gente pobre y desamparada que fracasó económicamente dentro del sistema capitalista salvaje de Ryan.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar12" aria-expanded="false" aria-controls="lugar12">
+                            Pauper's Drop (La Guarida del Pobre)
+                        </button>
+                        <div class="collapse" id="lugar12">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>Un barrio marginal, hacinado y decadente construido en los callejones traseros de la infraestructura del tren.</li>
+                                <li>Se formó con la gente pobre y desamparada que fracasó económicamente dentro del sistema capitalista salvaje de Ryan.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 13. Siren Alley -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/Siren_Alley-Little_Eden05.webp" class="card-img-top" alt="Siren Alley" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Siren Alley (Callejón de las Sirenas)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>El antiguo distrito de entretenimiento nocturno, tabernas y burdeles destinado a los obreros y arquitectos.</li>
-                            <li>Quedó completamente inundado tras los sabotajes de la guerra civil, obligando a transitarlo con trajes de buzo.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar13" aria-expanded="false" aria-controls="lugar13">
+                            Siren Alley (Callejón de las Sirenas)
+                        </button>
+                        <div class="collapse" id="lugar13">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>El antiguo distrito de entretenimiento nocturno, tabernas y burdeles destinado a los obreros y arquitectos.</li>
+                                <li>Quedó completamente inundado tras los sabotajes de la guerra civil, obligando a transitarlo con trajes de buzo.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 14. Dionysus Park -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/D_Park-GalleryEnt05.webp" class="card-img-top" alt="Dionysus Park" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Dionysus Park (Parque Dioniso)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>Un opulento parque artístico, galerías y zona de retiro vacacional financiado por el millonario Stanley Poole.</li>
-                            <li>Posteriormente fue expropiado y utilizado como base de operaciones por Sofia Lamb y su secta colectivista "La Familia".</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar14" aria-expanded="false" aria-controls="lugar14">
+                            Dionysus Park (Parque Dioniso)
+                        </button>
+                        <div class="collapse" id="lugar14">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>Un opulento parque artístico, galerías y zona de retiro vacacional financiado por el millonario Stanley Poole.</li>
+                                <li>Posteriormente fue expropiado y utilizado como base de operaciones por Sofia Lamb y su secta colectivista "La Familia".</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 15. Fontaine Futuristics -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/Fontaine_Futuristics_seen_from_Seafloor.webp" class="card-img-top" alt="Fontaine Futuristics" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Fontaine Futuristics (Sede Corporativa)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>Las oficinas centrales y laboratorios principales del imperio comercial de Frank Fontaine.</li>
-                            <li>Oculta las instalaciones secretas de investigación genética avanzada y las oficinas de los científicos principales (como Suchong y Gilbert Alexander).</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar15" aria-expanded="false" aria-controls="lugar15">
+                            Fontaine Futuristics (Sede Corporativa)
+                        </button>
+                        <div class="collapse" id="lugar15">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>Las oficinas centrales y laboratorios principales del imperio comercial de Frank Fontaine.</li>
+                                <li>Oculta las instalaciones secretas de investigación genética avanzada y las oficinas de los científicos principales (como Suchong y Gilbert Alexander).</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- 16. Persephone -->
             <div class="col">
-                <div class="card h-100 shadow-sm">
+                <div class="card shadow-sm">
                     <img src="./IMG/BioShock_2-Inner_Persephone_-_Augustus_Sinclair_lifeboat_f0359.webp" class="card-img-top" alt="Persephone" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Persephone (Perséfone)</h5>
-                        <ul class="card-text small ps-3 mb-0">
-                            <li>Una descomunal prisión de máxima seguridad oculta en lo más profundo de una fosa abisal aislada.</li>
-                            <li>Diseñada en secreto para encerrar permanentemente a los criminales, contrabandistas y enemigos políticos de Andrew Ryan, quienes terminaban siendo usados como cobayas humanas.</li>
-                        </ul>
+                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#lugar16" aria-expanded="false" aria-controls="lugar16">
+                            Persephone (Perséfone)
+                        </button>
+                        <div class="collapse" id="lugar16">
+                            <ul class="card-text small ps-3 mb-0 mt-3">
+                                <li>Una descomunal prisión de máxima seguridad oculta en lo más profundo de una fosa abisal aislada.</li>
+                                <li>Diseñada en secreto para encerrar permanentemente a los criminales, contrabandistas y enemigos políticos de Andrew Ryan, quienes terminaban siendo usados como cobayas humanas.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
