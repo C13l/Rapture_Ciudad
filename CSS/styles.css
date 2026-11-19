@@ -187,3 +187,70 @@ a {
     color: var(--color_primario);
     font-family: var(--fuente);
 }
+
+/*  EFECTO DE APARICIÓN (index) */
+.aparece {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.aparece.en-vista {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .aparece {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ==========================================
+        TÍTULOS CON EFECTO DE LETRAS
+   ========================================== */
+.banner-container h1 {
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    line-height: 1.05;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 24px rgba(88, 160, 106, 0.45);
+}
+
+.palabra {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.letra {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(0.6em);
+    transition: opacity 0.5s ease, transform 0.5s ease, color 0.3s ease;
+    transition-delay: calc(var(--i) * 45ms);
+}
+
+.letras-visibles .letra,
+.en-vista .letra {
+    opacity: 1;
+    transform: none;
+}
+
+.card-title .letra {
+    transition-delay: calc(300ms + var(--i) * 40ms);
+}
+
+.banner-container h1 .letra:hover {
+    color: var(--color_texto_3);
+    transform: translateY(-8px);
+    transition-delay: 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .letra {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

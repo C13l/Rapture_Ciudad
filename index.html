@@ -52,10 +52,10 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img src="img/ciudad.jpg" class="card-img-index" alt="La ciudad submarina de Rapture con el cartel Welcome to Rapture">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h2 class="card-title">La ciudad</h2>
                             <p class="card-text">Una utopía construida bajo el mar que terminó en ruinas. Conocé su historia.</p>
-                            <button type="button" class="btn btn-outline-warning">Seguir leyendo</button>
+                            <button type="button" class="btn btn-outline-warning mt-auto align-self-start"><a href="ciudad.html">seguir leyendo</a></button>
                         </div>
                     </div>
                 </div>
@@ -63,10 +63,10 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img src="img/lugares.jpg" class="card-img-index" alt="Carteles de neón de los comercios de Rapture">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h2 class="card-title">Lugares de interés</h2>
                             <p class="card-text">Distritos, parques y centros de entretenimiento que alguna vez fueron el orgullo de la ciudad.</p>
-                            <button type="button" class="btn btn-outline-warning">Seguir leyendo</button>
+                            <button type="button" class="btn btn-outline-warning mt-auto align-self-start"><a href="lugares.html">seguir leyendo</a></button>
                         </div>
                     </div>
                 </div>
@@ -74,10 +74,10 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img src="img/tecnologia.jpg" class="card-img-index" alt="Edificios de Rapture iluminados bajo el agua">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h2 class="card-title">Tecnología</h2>
                             <p class="card-text">Plásmidos, cámaras que reviven y guardianes blindados. Descubrí qué hizo posible Rapture.</p>
-                            <button type="button" class="btn btn-outline-warning">Seguir leyendo</button>
+                            <button type="button" class="btn btn-outline-warning mt-auto align-self-start"><a href="tecnologia.html">seguir leyendo</a></button>
                         </div>
                     </div>
                 </div>
@@ -85,10 +85,10 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img src="img/contacto.jpg" class="card-img-index" alt="Siluetas de personajes frente a la ciudad de Rapture">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h2 class="card-title">Contacto</h2>
                             <p class="card-text">¿Tenés preguntas o ideas para el proyecto? Escribinos.</p>
-                            <button type="button" class="btn btn-outline-warning">Seguir leyendo</button>
+                            <button type="button" class="btn btn-outline-warning mt-auto align-self-start"><a href="contacto.html">seguir leyendo</a></button>
                         </div>
                     </div>
                 </div>
@@ -108,5 +108,71 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript: hace aparecer las tarjetas al llegar a ellas -->
+    <script>
+        const columnas = document.querySelectorAll('#tarjetas .row > div');
+
+        columnas.forEach((columna) => {
+            columna.classList.add('aparece');
+        });
+
+        const observador = new IntersectionObserver((entradas) => {
+            entradas
+                .filter((entrada) => entrada.isIntersecting)
+                .forEach((entrada, n) => {
+                    entrada.target.style.transitionDelay = (n * 120) + 'ms';
+                    entrada.target.classList.add('en-vista');
+                    observador.unobserve(entrada.target);
+                });
+        }, { threshold: 0.15 });
+
+        columnas.forEach((columna) => observador.observe(columna));
+    </script>
+
+    <!-- JavaScript: efecto de letras en los títulos -->
+    <script>
+        (() => {
+            function dividirLetras(elemento) {
+                const texto = elemento.textContent.trim();
+                elemento.setAttribute('aria-label', texto);
+                elemento.textContent = '';
+
+                let n = 0;
+                const palabras = texto.split(' ');
+
+                palabras.forEach((palabra, i) => {
+                    const contenedor = document.createElement('span');
+                    contenedor.className = 'palabra';
+                    contenedor.setAttribute('aria-hidden', 'true');
+
+                    palabra.split('').forEach((letra) => {
+                        const span = document.createElement('span');
+                        span.className = 'letra';
+                        span.textContent = letra;
+                        span.style.setProperty('--i', n);
+                        n++;
+                        contenedor.appendChild(span);
+                    });
+
+                    elemento.appendChild(contenedor);
+
+                    if (i < palabras.length - 1) {
+                        elemento.appendChild(document.createTextNode(' '));
+                    }
+                });
+            }
+
+            const titulo = document.querySelector('.banner-container h1');
+            const titulosTarjetas = document.querySelectorAll('#tarjetas .card-title');
+
+            if (titulo) {
+                dividirLetras(titulo);
+                setTimeout(() => titulo.classList.add('letras-visibles'), 300);
+            }
+
+            titulosTarjetas.forEach(dividirLetras);
+        })();
+    </script>
 </body>
 </html>
