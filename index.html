@@ -109,70 +109,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JavaScript: hace aparecer las tarjetas al llegar a ellas -->
-    <script>
-        const columnas = document.querySelectorAll('#tarjetas .row > div');
+    <script src="JS/general.js"></script>
+    <script src="JS/index.js"></script>
 
-        columnas.forEach((columna) => {
-            columna.classList.add('aparece');
-        });
-
-        const observador = new IntersectionObserver((entradas) => {
-            entradas
-                .filter((entrada) => entrada.isIntersecting)
-                .forEach((entrada, n) => {
-                    entrada.target.style.transitionDelay = (n * 120) + 'ms';
-                    entrada.target.classList.add('en-vista');
-                    observador.unobserve(entrada.target);
-                });
-        }, { threshold: 0.15 });
-
-        columnas.forEach((columna) => observador.observe(columna));
-    </script>
-
-    <!-- JavaScript: efecto de letras en los títulos -->
-    <script>
-        (() => {
-            function dividirLetras(elemento) {
-                const texto = elemento.textContent.trim();
-                elemento.setAttribute('aria-label', texto);
-                elemento.textContent = '';
-
-                let n = 0;
-                const palabras = texto.split(' ');
-
-                palabras.forEach((palabra, i) => {
-                    const contenedor = document.createElement('span');
-                    contenedor.className = 'palabra';
-                    contenedor.setAttribute('aria-hidden', 'true');
-
-                    palabra.split('').forEach((letra) => {
-                        const span = document.createElement('span');
-                        span.className = 'letra';
-                        span.textContent = letra;
-                        span.style.setProperty('--i', n);
-                        n++;
-                        contenedor.appendChild(span);
-                    });
-
-                    elemento.appendChild(contenedor);
-
-                    if (i < palabras.length - 1) {
-                        elemento.appendChild(document.createTextNode(' '));
-                    }
-                });
-            }
-
-            const titulo = document.querySelector('.banner-container h1');
-            const titulosTarjetas = document.querySelectorAll('#tarjetas .card-title');
-
-            if (titulo) {
-                dividirLetras(titulo);
-                setTimeout(() => titulo.classList.add('letras-visibles'), 300);
-            }
-
-            titulosTarjetas.forEach(dividirLetras);
-        })();
-    </script>
 </body>
 </html>
